@@ -1,30 +1,34 @@
-# Portfolio style inspiration
+# Aiman's Portfolio
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Welcome to my personal portfolio! This project showcases my skills, projects, and professional journey as a Computer Science student with a focus on AI and web development.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/aiman-shahids-projects/v0-portfolio-style-inspiration)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/RRAkpa84pSB)
+## 🌟 Features
+- Modern, futuristic design with glassmorphism and gradient effects
+- Responsive layout for desktop and mobile
+- Sections include About Me, Skills & Expertise, Projects, Education & Certificates, Contact
+- Smooth scrolling and interactive navigation
 
-## Overview
+## 💻 Projects
+1. **AI Task Teller**: Intelligent task automation using AI agents.
+2. **Nyra Chatbot**: Personalized AI assistant for study help and learning management.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 🛠 Skills & Expertise
+- Full-stack web development (React, Next.js, Tailwind CSS)
+- OpenAI SDK and AI agent orchestration
+- UI/UX design and animations
 
-## Deployment
+## 🎓 Education & Certificates
+- **Bachelor of Computer Science** – Lahore College of Women University (2023–2027)
+- **Agentic and Robotic AI Engineering** – PIAIC (2024)
+- **Fundamentals of Agentic AI Level 1 Quiz** – 88% (2025)
+- **Fundamentals of Agentic AI Level 2 Quiz** – 77% (2025)
 
-Your project is live at:
+## 🚀 Live Demo
+[Check out my portfolio live](https://my-portfolio-psi-three-88.vercel.app/)
 
-**[https://vercel.com/aiman-shahids-projects/v0-portfolio-style-inspiration](https://vercel.com/aiman-shahids-projects/v0-portfolio-style-inspiration)**
+## 📂 Repository
+This repo contains the complete source code for my portfolio built using Next.js, Tailwind CSS, and modern frontend technologies.
 
-## Build your app
+## 📫 Contact
+You can reach me at [your email] or via LinkedIn: [LinkedIn link]
 
-Continue building your app on:
-
-**[https://v0.app/chat/projects/RRAkpa84pSB](https://v0.app/chat/projects/RRAkpa84pSB)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
