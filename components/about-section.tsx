@@ -53,7 +53,7 @@ export default function AboutSection() {
   }, [])
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0">
         {/* Large atmospheric glows */}
         <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/15 to-transparent rounded-full blur-[100px] animate-pulse-slow"></div>
@@ -96,20 +96,22 @@ export default function AboutSection() {
 
       {/* Content */}
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-4 text-white">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-4 text-white">
             About{" "}
             <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
               Me
             </span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">My journey in computer science and AI development</p>
+          <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
+            My journey in computer science and AI development
+          </p>
         </div>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#06B6D4] rounded-full shadow-lg shadow-[#06B6D4]/50"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 sm:w-1 h-full bg-[#06B6D4] rounded-full shadow-lg shadow-[#06B6D4]/50"></div>
 
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {timelineSteps.map((step, index) => {
               const IconComponent = step.icon
               const isVisible = visibleSteps.includes(step.id)
@@ -124,23 +126,23 @@ export default function AboutSection() {
                   } transition-all duration-700 ease-out`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className={`w-5/12 ${isLeft ? "pr-8" : "pl-8"}`}>
-                    <div className="bg-white/5 backdrop-blur-md border border-[#8B5CF6]/30 rounded-lg p-6 hover:bg-white/10 hover:border-[#EC4899]/50 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 hover:shadow-[#EC4899]/30">
+                  <div className={`w-full sm:w-5/12 ${isLeft ? "sm:pr-8" : "sm:pl-8"} px-4 sm:px-0`}>
+                    <div className="bg-white/5 backdrop-blur-md border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-white/10 hover:border-[#EC4899]/50 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 hover:shadow-[#EC4899]/30">
                       <div className="flex items-center mb-3">
-                        <span className="text-sm font-semibold text-white bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] px-3 py-1 rounded-full">
+                        <span className="text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] px-2 sm:px-3 py-1 rounded-full">
                           {step.year}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold font-heading text-white mb-2">{step.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold font-heading text-white mb-2">{step.title}</h3>
                       <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
                     </div>
                   </div>
 
                   <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                     <div className="relative group">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 hover:shadow-[#EC4899]/70 transition-all duration-300">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 hover:shadow-[#EC4899]/70 transition-all duration-300">
                         <div className="w-full h-full rounded-full bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
-                          <IconComponent className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+                          <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                         </div>
                       </div>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] opacity-0 group-hover:opacity-40 group-hover:animate-ping transition-opacity duration-300"></div>

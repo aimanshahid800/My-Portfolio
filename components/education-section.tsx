@@ -62,13 +62,13 @@ export default function EducationSection() {
   }, [])
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="education" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {showCertificate1 && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full bg-black/50 backdrop-blur-md border border-[#8B5CF6]/30 rounded-xl p-6">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="relative max-w-4xl w-full bg-black/50 backdrop-blur-md border border-[#8B5CF6]/30 rounded-xl p-3 sm:p-6">
             <button
               onClick={() => setShowCertificate1(false)}
-              className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
             >
               <X className="w-4 h-4 text-white" />
             </button>
@@ -82,11 +82,11 @@ export default function EducationSection() {
       )}
 
       {showCertificate2 && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full bg-black/50 backdrop-blur-md border border-[#8B5CF6]/30 rounded-xl p-6">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="relative max-w-4xl w-full bg-black/50 backdrop-blur-md border border-[#8B5CF6]/30 rounded-xl p-3 sm:p-6">
             <button
               onClick={() => setShowCertificate2(false)}
-              className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
             >
               <X className="w-4 h-4 text-white" />
             </button>
@@ -122,26 +122,26 @@ export default function EducationSection() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-4 text-white">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-4 text-white">
             Education &{" "}
             <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
               Certificates
             </span>
           </h2>
-          <p className="text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
             Continuous learning and professional development in AI and computer science
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
-            <div className="flex items-center justify-center lg:justify-start mb-8">
-              <GraduationCap className="h-8 w-8 text-[#8B5CF6] mr-3" />
-              <h3 className="text-2xl font-semibold font-heading text-white">Education</h3>
+            <div className="flex items-center justify-center lg:justify-start mb-6 sm:mb-8">
+              <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-[#8B5CF6] mr-3" />
+              <h3 className="text-xl sm:text-2xl font-semibold font-heading text-white">Education</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {educationData.map((edu, index) => {
                 const IconComponent = edu.icon
                 const isVisible = visibleCards.includes(index)
@@ -155,26 +155,26 @@ export default function EducationSection() {
                     } transition-all duration-700 ease-out`}
                     style={{ transitionDelay: `${index * 200}ms` }}
                   >
-                    <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
-                      <div className="flex items-start space-x-4">
-                        <div className="relative">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
+                    <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
+                      <div className="flex items-start space-x-3 sm:space-x-4">
+                        <div className="relative flex-shrink-0">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
                             <div className="w-full h-full rounded-lg bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
-                              <IconComponent className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                              <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                             </div>
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                            <h4 className="text-base sm:text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300">
                               {edu.degree}
                             </h4>
-                            <div className="flex items-center text-sm text-white/60">
-                              <Calendar className="h-4 w-4 mr-1" />
+                            <div className="flex items-center text-xs sm:text-sm text-white/60 mt-1 sm:mt-0">
+                              <Calendar className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {edu.year}
                             </div>
                           </div>
-                          <p className="text-[#EC4899] font-medium mb-2">{edu.institution}</p>
+                          <p className="text-[#EC4899] font-medium mb-2 text-sm sm:text-base">{edu.institution}</p>
                           <p className="text-sm text-white/70 leading-relaxed">{edu.description}</p>
                         </div>
                       </div>
@@ -186,12 +186,12 @@ export default function EducationSection() {
           </div>
 
           <div>
-            <div className="flex items-center justify-center lg:justify-start mb-8">
-              <Award className="h-8 w-8 text-[#EC4899] mr-3" />
-              <h3 className="text-2xl font-semibold font-heading text-white">Certificates</h3>
+            <div className="flex items-center justify-center lg:justify-start mb-6 sm:mb-8">
+              <Award className="h-6 w-6 sm:h-8 sm:w-8 text-[#EC4899] mr-3" />
+              <h3 className="text-xl sm:text-2xl font-semibold font-heading text-white">Certificates</h3>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {certificatesData.map((cert, index) => {
                 const isVisible = visibleCards.includes(index + educationData.length)
 
@@ -204,31 +204,35 @@ export default function EducationSection() {
                     } transition-all duration-700 ease-out`}
                     style={{ transitionDelay: `${(index + educationData.length) * 200}ms` }}
                   >
-                    <div className="bg-black/30 backdrop-blur-sm border border-[#EC4899]/30 rounded-lg p-6 hover:bg-black/50 hover:border-[#06B6D4]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#06B6D4]/30 transition-all duration-300 shadow-xl shadow-[#EC4899]/20 group">
-                      <div className="flex items-start space-x-4">
-                        <div className="relative">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#EC4899] via-[#06B6D4] to-[#8B5CF6] p-1 shadow-lg shadow-[#EC4899]/50 group-hover:shadow-[#06B6D4]/70 transition-all duration-300">
+                    <div className="bg-black/30 backdrop-blur-sm border border-[#EC4899]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#06B6D4]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#06B6D4]/30 transition-all duration-300 shadow-xl shadow-[#EC4899]/20 group">
+                      <div className="flex items-start space-x-3 sm:space-x-4">
+                        <div className="relative flex-shrink-0">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#EC4899] via-[#06B6D4] to-[#8B5CF6] p-1 shadow-lg shadow-[#EC4899]/50 group-hover:shadow-[#06B6D4]/70 transition-all duration-300">
                             <div className="w-full h-full rounded-lg bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
-                              <Award className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                              <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                             </div>
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#EC4899] group-hover:to-[#06B6D4] transition-all duration-300">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                            <h4 className="text-base sm:text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#EC4899] group-hover:to-[#06B6D4] transition-all duration-300 pr-2">
                               {cert.name}
                             </h4>
-                            <span className="text-sm text-white/60">{cert.year}</span>
+                            <span className="text-xs sm:text-sm text-white/60 mt-1 sm:mt-0 flex-shrink-0">
+                              {cert.year}
+                            </span>
                           </div>
                           <div className="flex items-center justify-between mb-3">
-                            <span className="text-[#06B6D4] font-semibold text-lg">Score: {cert.score}</span>
+                            <span className="text-[#06B6D4] font-semibold text-base sm:text-lg">
+                              Score: {cert.score}
+                            </span>
                           </div>
                           <p className="text-sm text-white/70 leading-relaxed mb-4">{cert.description}</p>
                           <button
                             onClick={() => (index === 0 ? setShowCertificate1(true) : setShowCertificate2(true))}
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] text-white text-sm font-medium rounded-lg hover:from-[#06B6D4] hover:to-[#8B5CF6] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#EC4899]/30 hover:shadow-[#06B6D4]/50"
+                            className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] text-white text-xs sm:text-sm font-medium rounded-lg hover:from-[#06B6D4] hover:to-[#8B5CF6] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#EC4899]/30 hover:shadow-[#06B6D4]/50"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                             View Certificate
                           </button>
                         </div>

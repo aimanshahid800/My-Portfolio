@@ -25,7 +25,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-32">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/15 to-transparent rounded-full blur-[100px] animate-pulse-slow"></div>
         <div
@@ -80,24 +80,26 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Left Column */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-heading leading-tight">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight">
                 <span className="text-white">Hi, I'm </span>
                 <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
                   Aiman Shahid
                 </span>
               </h1>
 
-              <p className="text-xl sm:text-2xl text-white/70 font-medium">BSCS Student & Aspiring AI Developer</p>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-medium">
+                BSCS Student & Aspiring AI Developer
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] hover:from-[#8B5CF6]/90 hover:via-[#EC4899]/90 hover:to-[#06B6D4]/90 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] hover:from-[#8B5CF6]/90 hover:via-[#EC4899]/90 hover:to-[#06B6D4]/90 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base"
                 onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
               >
                 View My Work
@@ -105,20 +107,20 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-[#8B5CF6]/50 text-[#8B5CF6] hover:bg-[#8B5CF6]/10 hover:border-[#8B5CF6] font-semibold px-8 py-3 rounded-full bg-transparent transition-all duration-300 hover:scale-105"
+                className="border-2 border-[#8B5CF6]/50 text-[#8B5CF6] hover:bg-[#8B5CF6]/10 hover:border-[#8B5CF6] font-semibold px-6 sm:px-8 py-3 rounded-full bg-transparent transition-all duration-300 hover:scale-105 text-sm sm:text-base"
               >
                 Download CV
               </Button>
             </div>
 
-            <div className="flex space-x-6 pt-4">
+            <div className="flex justify-center lg:justify-start space-x-6 pt-4">
               <a
                 href="https://github.com/aimanshahid800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-[#8B5CF6] transition-all duration-300 hover:scale-110 transform group"
               >
-                <Github className="h-6 w-6 group-hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.6)]" />
+                <Github className="h-6 w-6 sm:h-7 sm:w-7 group-hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.6)]" />
               </a>
               <a
                 href="https://www.linkedin.com/in/aiman-shahid-b49035320"
@@ -126,20 +128,20 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-[#EC4899] transition-all duration-300 hover:scale-110 transform group"
               >
-                <Linkedin className="h-6 w-6 group-hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]" />
+                <Linkedin className="h-6 w-6 sm:h-7 sm:w-7 group-hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]" />
               </a>
               <a
                 href="mailto:aimanshahid800@gmail.com"
                 className="text-white/60 hover:text-[#06B6D4] transition-all duration-300 hover:scale-110 transform group"
               >
-                <Mail className="h-6 w-6 group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]" />
+                <Mail className="h-6 w-6 sm:h-7 sm:w-7 group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]" />
               </a>
             </div>
           </div>
 
-          {/* Right Column - 3D Animated Blob */}
-          <div className="flex justify-center items-center">
-            <div className="relative w-96 h-96">
+          {/* Right Column - Responsive blob sizing */}
+          <div className="flex justify-center items-center mt-8 lg:mt-0">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div
                 ref={blobRef}
                 className="absolute inset-0 rounded-full transition-transform duration-300 ease-out"

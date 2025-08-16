@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0">
         {/* Large atmospheric glows */}
         <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/15 to-transparent rounded-full blur-[100px] animate-pulse-slow"></div>
@@ -44,51 +44,57 @@ export default function ContactSection() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-4 text-white">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4 text-white">
             Get In{" "}
             <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
               Touch
             </span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
             Let's discuss your next project and bring your ideas to life
           </p>
         </div>
 
         {/* Contact Info */}
         <div className="max-w-2xl mx-auto">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-8 sm:space-y-10">
             <div>
-              <h3 className="text-2xl font-semibold font-heading mb-6 text-white">Let's Connect</h3>
-              <p className="text-white/70 mb-8 leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl font-semibold font-heading mb-6 sm:mb-8 text-white">Let's Connect</h3>
+              <p className="text-white/70 mb-8 sm:mb-10 leading-relaxed text-base sm:text-lg max-w-xl mx-auto">
                 I'm always interested in new opportunities and exciting projects. Whether you have a question or just
                 want to say hi, feel free to reach out!
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-center justify-center">
-                <Mail className="h-6 w-6 text-[#4CC9F0] mr-4" />
-                <div className="text-center">
-                  <p className="font-medium text-white">Email</p>
-                  <p className="text-white/70">aimanshahid800@gmail.com</p>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#4CC9F0]/20 to-[#4CC9F0]/10 border border-[#4CC9F0]/30">
+                  <Mail className="h-6 w-6 text-[#4CC9F0]" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-white text-lg">Email</p>
+                  <p className="text-white/80 text-base">aimanshahid800@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center">
-                <Phone className="h-6 w-6 text-[#A66CFF] mr-4" />
-                <div className="text-center">
-                  <p className="font-medium text-white">Phone</p>
-                  <p className="text-white/70">03234933498</p>
+              <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#A66CFF]/20 to-[#A66CFF]/10 border border-[#A66CFF]/30">
+                  <Phone className="h-6 w-6 text-[#A66CFF]" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-white text-lg">Phone</p>
+                  <p className="text-white/80 text-base">03234933498</p>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center">
-                <MapPin className="h-6 w-6 text-[#4CC9F0] mr-4" />
-                <div className="text-center">
-                  <p className="font-medium text-white">Location</p>
-                  <p className="text-white/70">Lahore, Pakistan</p>
+              <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#06B6D4]/20 to-[#06B6D4]/10 border border-[#06B6D4]/30">
+                  <MapPin className="h-6 w-6 text-[#06B6D4]" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-white text-lg">Location</p>
+                  <p className="text-white/80 text-base">Lahore, Pakistan</p>
                 </div>
               </div>
             </div>
@@ -96,8 +102,10 @@ export default function ContactSection() {
         </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-[#8B5CF6]/30 text-center">
-          <p className="text-white/70">© 2024 aimiTECH. Built with passion and modern technologies.</p>
+        <div className="mt-16 sm:mt-20 pt-6 sm:pt-8 border-t border-[#8B5CF6]/30 text-center">
+          <p className="text-white/70 text-sm sm:text-base">
+            © 2024 aimiTECH. Built with passion and modern technologies.
+          </p>
         </div>
       </div>
     </section>

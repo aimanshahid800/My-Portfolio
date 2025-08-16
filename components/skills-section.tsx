@@ -44,7 +44,7 @@ export default function SkillsSection() {
   }, [])
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-[#06B6D4]/30 via-[#8B5CF6]/20 to-transparent rounded-full blur-3xl"></div>
@@ -68,23 +68,23 @@ export default function SkillsSection() {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6 text-center lg:text-left">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-4 text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-4 text-white">
                 Skills &{" "}
                 <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
                   Expertise
                 </span>
               </h2>
             </div>
-            <p className="text-xl text-white/70 leading-relaxed text-center lg:text-left">
+            <p className="text-lg sm:text-xl text-white/70 leading-relaxed text-center lg:text-left">
               I specialize in AI-powered applications, backend development, and modern web technologies. My focus is on
               creating intelligent systems that combine innovation with simplicity.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {skillCards.map((card, index) => {
               const IconComponent = card.icon
               const isVisible = visibleCards.includes(index)
@@ -98,18 +98,18 @@ export default function SkillsSection() {
                   } transition-all duration-700 ease-out`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
-                    <div className="flex items-start space-x-4">
-                      <div className="relative">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
+                  <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="relative flex-shrink-0">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
                           <div className="w-full h-full rounded-lg bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
-                            <IconComponent className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                            <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                           </div>
                         </div>
                         <div className="absolute inset-0 rounded-xl bg-gradient-radial from-[#8B5CF6] via-[#EC4899] to-transparent opacity-0 group-hover:opacity-40 group-hover:animate-ping transition-opacity duration-300"></div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold font-heading text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-base sm:text-lg font-semibold font-heading text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300">
                           {card.title}
                         </h3>
                         <p className="text-white/70 text-sm leading-relaxed">{card.description}</p>
