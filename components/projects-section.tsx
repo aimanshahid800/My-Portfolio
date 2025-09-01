@@ -85,7 +85,7 @@ export default function ProjectsSection() {
         ></div>
       </div>
 
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-4 text-white">
             My{" "}
@@ -98,7 +98,71 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="lg:hidden space-y-4 sm:space-y-6">
+          {projects.map((project, index) => {
+            const IconComponent = project.icon
+            const isVisible = visibleProjects.includes(index)
+
+            return (
+              <div
+                key={index}
+                data-index={index}
+                className={`${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                } transition-all duration-700 ease-out`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="relative flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
+                        <div className="w-full h-full rounded-lg bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
+                          <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300 mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-white/70 leading-relaxed mb-4">{project.description}</p>
+                      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <a
+                          href={project.codeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] rounded-lg text-white text-xs sm:text-sm font-medium hover:shadow-lg hover:shadow-[#8B5CF6]/25 hover:scale-105 transition-all duration-300"
+                        >
+                          <Github className="w-3 h-3 sm:w-4 sm:h-4" />
+                          Code
+                        </a>
+                        {project.demoUrl ? (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 flex items-center justify-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] rounded-lg text-white text-xs sm:text-sm font-medium hover:shadow-lg hover:shadow-[#8B5CF6]/25 hover:scale-105 transition-all duration-300"
+                          >
+                            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                            Demo
+                          </a>
+                        ) : (
+                          <div className="flex-1 flex items-center justify-center gap-2 px-3 sm:px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white/50 text-xs sm:text-sm font-medium cursor-not-allowed">
+                            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                            Demo
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Desktop timeline layout */}
+        <div className="hidden lg:block relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 sm:w-1 h-full bg-[#06B6D4] rounded-full shadow-lg shadow-[#06B6D4]/50"></div>
 
           <div className="space-y-12 sm:space-y-16">
@@ -116,7 +180,6 @@ export default function ProjectsSection() {
                   } transition-all duration-700 ease-out`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  {/* Project Card - Responsive sizing and spacing */}
                   <div className={`w-full sm:w-5/12 ${isLeft ? "sm:pr-8" : "sm:pl-8"} px-4 sm:px-0`}>
                     <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#EC4899]/50 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 hover:shadow-[#EC4899]/30">
                       <h3 className="text-base sm:text-lg font-semibold font-heading text-white mb-2">
@@ -153,7 +216,6 @@ export default function ProjectsSection() {
                     </div>
                   </div>
 
-                  {/* Icon node - Responsive icon sizing */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                     <div className="relative group">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 hover:shadow-[#EC4899]/70 transition-all duration-300">

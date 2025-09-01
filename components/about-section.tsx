@@ -95,7 +95,7 @@ export default function AboutSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading mb-4 text-white">
             About{" "}
@@ -108,7 +108,49 @@ export default function AboutSection() {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="lg:hidden space-y-4 sm:space-y-6">
+          {timelineSteps.map((step, index) => {
+            const IconComponent = step.icon
+            const isVisible = visibleSteps.includes(step.id)
+
+            return (
+              <div
+                key={step.id}
+                data-step={step.id}
+                className={`${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                } transition-all duration-700 ease-out`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="bg-black/30 backdrop-blur-sm border border-[#8B5CF6]/30 rounded-lg p-4 sm:p-6 hover:bg-black/50 hover:border-[#EC4899]/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#EC4899]/30 transition-all duration-300 shadow-xl shadow-[#8B5CF6]/20 group">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="relative flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] p-1 shadow-lg shadow-[#8B5CF6]/50 group-hover:shadow-[#EC4899]/70 transition-all duration-300">
+                        <div className="w-full h-full rounded-lg bg-[#0a0a0a] flex items-center justify-center group-hover:bg-[#121212] transition-colors duration-300">
+                          <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                        <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8B5CF6] group-hover:to-[#06B6D4] transition-all duration-300">
+                          {step.title}
+                        </h3>
+                        <span className="text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] px-2 sm:px-3 py-1 rounded-full mt-1 sm:mt-0 self-start">
+                          {step.year}
+                        </span>
+                      </div>
+                      <p className="text-sm text-white/70 leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Desktop timeline layout */}
+        <div className="hidden lg:block relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 sm:w-1 h-full bg-[#06B6D4] rounded-full shadow-lg shadow-[#06B6D4]/50"></div>
 
           <div className="space-y-12 sm:space-y-16">
