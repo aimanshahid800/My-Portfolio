@@ -24,7 +24,7 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 - **Fundamentals of Agentic AI Level 2 Quiz** – 77% (2025)
 
 ## 🚀 Live Demo
-[Check out my portfolio live](https://v0-portfolio-style-inspiration.vercel.app/)
+[Check out my portfolio live](https://my-portfolio-psi-three-88.vercel.app/)
 
 ## 📂 Repository
 This repo contains the complete source code for my portfolio built using Next.js, Tailwind CSS, and modern frontend technologies.
