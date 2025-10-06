@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { useEffect, useRef } from "react"
+import FloatingTechLogos from "@/components/floating-tech-logos"
 
 export default function HeroSection() {
   const blobRef = useRef<HTMLDivElement>(null)
@@ -163,6 +164,8 @@ export default function HeroSection() {
                 className="absolute inset-8 rounded-full bg-gradient-to-br from-[#06B6D4]/20 to-[#8B5CF6]/20 blur-2xl"
                 style={{ animation: "blob-glow 4s ease-in-out infinite alternate-reverse" }}
               ></div>
+
+              <FloatingTechLogos />
             </div>
           </div>
         </div>

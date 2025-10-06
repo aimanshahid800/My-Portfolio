@@ -350,4 +350,21 @@
       linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  /* Added 3D floating animation for tech logos */
+  @keyframes float-tech {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: translateY(-15px) translateX(5px) rotateX(5deg) rotateY(5deg);
+    }
+    50% {
+      transform: translateY(-25px) translateX(-5px) rotateX(-5deg) rotateY(10deg);
+    }
+    75% {
+      transform: translateY(-10px) translateX(8px) rotateX(3deg) rotateY(-5deg);
+    }
+  }
 }
