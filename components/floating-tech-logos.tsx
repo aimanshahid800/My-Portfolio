@@ -37,92 +37,92 @@ export default function FloatingTechLogos() {
   // Colors/glow match each brand and the neon circle.
   const logos = [
     {
-      name: "Python",
-      icon: "🐍",
-      color: "#3776AB",
-      glow: "#FFD43B",
-      position: { x: -140, y: -82 },
-      scale: 1.15,
-      depth: 50,
-      speed: 0.02,
-      delay: 0.0,
-    },
-    {
       name: "React",
-      icon: "⚛️",
+      src: "/images/logos/react-3d.png",
       color: "#61DAFB",
       glow: "#61DAFB",
-      position: { x: 118, y: -108 },
-      scale: 1.0,
-      depth: 45,
+      position: { x: 140, y: -110 },
+      scale: 1.08,
+      depth: 46,
       speed: 0.018,
+      delay: 0.1,
+    },
+    {
+      name: "Node.js",
+      src: "/images/logos/nodejs-3d.png",
+      color: "#339933",
+      glow: "#339933",
+      position: { x: -100, y: -130 },
+      scale: 1.0,
+      depth: 44,
+      speed: 0.016,
       delay: 0.2,
     },
     {
-      name: "TypeScript",
-      icon: "TS",
-      color: "#3178C6",
-      glow: "#3178C6",
-      position: { x: -166, y: 58 },
-      scale: 0.9,
+      name: "AI Brain",
+      src: "/images/logos/ai-brain.png",
+      color: "#8B5CF6",
+      glow: "#EC4899",
+      position: { x: 175, y: -10 },
+      scale: 1.15,
+      depth: 60,
+      speed: 0.022,
+      delay: 0.3,
+    },
+    {
+      name: "n8n",
+      src: "/images/logos/n8n.png",
+      color: "#EA4B71",
+      glow: "#EA4B71",
+      position: { x: -150, y: -20 },
+      scale: 1.05,
       depth: 40,
       speed: 0.017,
       delay: 0.4,
     },
     {
+      name: "TypeScript",
+      src: "/images/logos/typescript-3d.png",
+      color: "#3178C6",
+      glow: "#60A5FA",
+      position: { x: -190, y: 80 },
+      scale: 1.08,
+      depth: 42,
+      speed: 0.017,
+      delay: 0.5,
+    },
+    {
       name: "VS Code",
-      icon: "💻",
-      color: "#007ACC",
-      glow: "#007ACC",
-      position: { x: 148, y: 72 },
-      scale: 1.05,
-      depth: 55,
-      speed: 0.021,
+      src: "/images/logos/vscode-3d.png",
+      color: "#3BA1F3",
+      glow: "#60A5FA",
+      position: { x: 20, y: 140 },
+      scale: 1.08,
+      depth: 45,
+      speed: 0.018,
       delay: 0.6,
     },
     {
-      name: "Node.js",
-      icon: "☘️",
-      color: "#339933",
-      glow: "#339933",
-      position: { x: -70, y: -136 },
-      scale: 0.85,
-      depth: 42,
-      speed: 0.016,
-      delay: 0.8,
-    },
-    {
-      name: "AI",
-      icon: "🧠",
-      color: "#8B5CF6",
-      glow: "#EC4899",
-      position: { x: 166, y: -18 },
-      scale: 1.18,
-      depth: 60,
-      speed: 0.022,
-      delay: 1.0,
-    },
-    {
-      name: "n8n",
-      icon: "🔗",
-      color: "#EA4B71",
-      glow: "#EA4B71",
-      position: { x: -112, y: -6 },
-      scale: 0.9,
-      depth: 38,
-      speed: 0.017,
-      delay: 1.2,
-    },
-    {
-      name: "OpenAI",
-      icon: "✳️",
-      color: "#10A37F",
-      glow: "#10A37F",
-      position: { x: 78, y: 132 },
-      scale: 0.95,
+      name: "ChatGPT",
+      src: "/images/logos/chatgpt-3d.png",
+      color: "#10BFA5",
+      glow: "#34D399",
+      position: { x: 200, y: 90 },
+      scale: 1.1,
       depth: 48,
       speed: 0.019,
-      delay: 1.4,
+      delay: 0.7,
+    },
+    {
+      name: "Python",
+      src: "/images/logos/python-3d.png",
+      color: "#3776AB",
+      glow: "#F7B500",
+      position: { x: -10, y: -210 },
+      scale: 1.0,
+      depth: 50,
+      speed: 0.019,
+      delay: 0.8,
     },
   ]
 
@@ -153,7 +153,7 @@ export default function FloatingTechLogos() {
           >
             {/* Glassmorphic tile */}
             <div
-              className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/15"
+              className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl overflow-hidden backdrop-blur-md border border-white/15"
               style={{
                 background: `linear-gradient(135deg, ${logo.color}22, ${logo.glow}14)`,
                 boxShadow: `
@@ -167,27 +167,21 @@ export default function FloatingTechLogos() {
             >
               {/* glossy highlight */}
               <div
-                className="absolute inset-0 rounded-2xl opacity-35"
+                className="absolute inset-0 opacity-35 rounded-xl"
                 style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.35), transparent 58%)" }}
               />
 
-              {/* Placeholder icon; replace with official brand SVGs when available */}
-              <div
-                className="relative text-xl sm:text-2xl font-bold z-10 select-none"
-                style={{
-                  color: logo.color,
-                  textShadow: `0 0 10px ${logo.glow}, 0 2px 4px rgba(0,0,0,0.45)`,
-                  transform: "translateZ(6px)",
-                }}
-                aria-label={logo.name}
-                role="img"
-              >
-                {logo.icon}
-              </div>
+              {/* Brand icon (kept as-is, no circular crop) */}
+              <img
+                src={logo.src || "/placeholder.svg"}
+                alt={logo.name}
+                className="relative z-10 w-10 h-10 sm:w-12 sm:h-12 object-contain object-center"
+                style={{ transform: "translateZ(6px)" }}
+              />
 
               {/* neon rim */}
               <div
-                className="absolute inset-0 rounded-2xl"
+                className="absolute inset-0 rounded-xl"
                 style={{
                   border: `2px solid ${logo.color}40`,
                   boxShadow: `0 0 18px ${logo.glow}55, inset 0 0 18px ${logo.glow}22`,
@@ -197,7 +191,7 @@ export default function FloatingTechLogos() {
 
             {/* depth shadow */}
             <div
-              className="absolute inset-0 -z-10 rounded-2xl blur-xl opacity-60"
+              className="absolute inset-0 -z-10 blur-xl opacity-60"
               style={{
                 background: `radial-gradient(40% 40% at 50% 50%, ${logo.glow}55, transparent 70%)`,
                 transform: "translateY(12px) scale(0.9)",

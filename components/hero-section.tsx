@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import { useEffect, useRef } from "react"
 import FloatingTechLogos from "@/components/floating-tech-logos"
+import TypingText from "./typing-text"
 
 export default function HeroSection() {
   const blobRef = useRef<HTMLDivElement>(null)
@@ -86,14 +87,21 @@ export default function HeroSection() {
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight">
-                <span className="text-white">Hi, I'm </span>
-                <span className="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent">
-                  Aiman Shahid
-                </span>
+                <span className="text-white">{"Hi, I'm"}</span>
+                <br />
+                <TypingText
+                  pre={""}
+                  highlight={"Aiman Shahid"}
+                  classNamePre="text-white"
+                  classNameHighlight="bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#06B6D4] bg-clip-text text-transparent"
+                  minSpeedMs={60}
+                  maxSpeedMs={120}
+                  pauseMs={1200}
+                />
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-medium">
-                BSCS Student & Aspiring AI Developer
+                <span className="inline-block animate-fade-up-loop">BSCS Student & Aspiring AI Developer</span>
               </p>
             </div>
 
