@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import { useEffect, useRef } from "react"
 import FloatingTechLogos from "@/components/floating-tech-logos"
 import TypingText from "./typing-text"
+import RotatingSubtitle from "./rotating-subtitle" // add rotating subtitle
 
 export default function HeroSection() {
   const blobRef = useRef<HTMLDivElement>(null)
@@ -101,7 +102,10 @@ export default function HeroSection() {
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-medium">
-                <span className="inline-block animate-fade-up-loop">BSCS Student & Aspiring AI Developer</span>
+                <RotatingSubtitle
+                  phrases={["BSCS Student", "Aspiring AI Developer", "Designer"]}
+                  className="animate-none" // keep position/size same, animation handled internally
+                />
               </p>
             </div>
 

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 
 export default function FloatingTechLogos() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const ORBIT_FACTOR = 0.88 // reduce radius ~12%
 
   useEffect(() => {
     const updateTransforms = (mx = 0, my = 0) => {
@@ -18,7 +19,10 @@ export default function FloatingTechLogos() {
         const px = mx * speed
         const py = my * speed
 
-        el.style.transform = `translate(calc(-50% + ${bx + px}px), calc(-50% + ${by + py}px)) scale(${scale}) translateZ(${depth}px)`
+        const sx = bx * ORBIT_FACTOR
+        const sy = by * ORBIT_FACTOR
+
+        el.style.transform = `translate(calc(-50% + ${sx + px}px), calc(-50% + ${sy + py}px)) scale(${scale}) translateZ(${depth}px)`
       })
     }
 
@@ -41,7 +45,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/react-3d.png",
       color: "#61DAFB",
       glow: "#61DAFB",
-      position: { x: 140, y: -110 },
+      position: { x: 126, y: -99 },
       scale: 1.08,
       depth: 46,
       speed: 0.018,
@@ -52,7 +56,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/nodejs-3d.png",
       color: "#339933",
       glow: "#339933",
-      position: { x: -100, y: -130 },
+      position: { x: -90, y: -117 },
       scale: 1.0,
       depth: 44,
       speed: 0.016,
@@ -63,7 +67,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/ai-brain.png",
       color: "#8B5CF6",
       glow: "#EC4899",
-      position: { x: 175, y: -10 },
+      position: { x: 158, y: -9 },
       scale: 1.15,
       depth: 60,
       speed: 0.022,
@@ -74,7 +78,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/n8n.png",
       color: "#EA4B71",
       glow: "#EA4B71",
-      position: { x: -150, y: -20 },
+      position: { x: -135, y: -18 },
       scale: 1.05,
       depth: 40,
       speed: 0.017,
@@ -85,7 +89,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/typescript-3d.png",
       color: "#3178C6",
       glow: "#60A5FA",
-      position: { x: -190, y: 80 },
+      position: { x: -171, y: 72 },
       scale: 1.08,
       depth: 42,
       speed: 0.017,
@@ -96,7 +100,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/vscode-3d.png",
       color: "#3BA1F3",
       glow: "#60A5FA",
-      position: { x: 20, y: 140 },
+      position: { x: 18, y: 126 },
       scale: 1.08,
       depth: 45,
       speed: 0.018,
@@ -107,7 +111,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/chatgpt-3d.png",
       color: "#10BFA5",
       glow: "#34D399",
-      position: { x: 200, y: 90 },
+      position: { x: 180, y: 81 },
       scale: 1.1,
       depth: 48,
       speed: 0.019,
@@ -118,7 +122,7 @@ export default function FloatingTechLogos() {
       src: "/images/logos/python-3d.png",
       color: "#3776AB",
       glow: "#F7B500",
-      position: { x: -10, y: -210 },
+      position: { x: -9, y: -189 },
       scale: 1.0,
       depth: 50,
       speed: 0.019,
@@ -138,7 +142,7 @@ export default function FloatingTechLogos() {
           data-depth={logo.depth}
           data-speed={logo.speed}
           style={{
-            transform: `translate(calc(-50% + ${logo.position.x}px), calc(-50% + ${logo.position.y}px)) scale(${logo.scale}) translateZ(${logo.depth}px)`,
+            transform: `translate(calc(-50% + ${logo.position.x * ORBIT_FACTOR}px), calc(-50% + ${logo.position.y * ORBIT_FACTOR}px)) scale(${logo.scale}) translateZ(${logo.depth}px)`,
             zIndex: 100 + Math.round(logo.depth),
           }}
         >

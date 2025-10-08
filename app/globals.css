@@ -402,4 +402,32 @@
   .animate-fade-up-loop {
     animation: fade-up-loop 6s ease-in-out infinite;
   }
+
+  /* subtitle in/out animations for rotating phrases */
+  @keyframes subtitle-in {
+    0% {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes subtitle-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  .animate-subtitle-in {
+    animation: subtitle-in 400ms ease-out forwards;
+  }
+  .animate-subtitle-out {
+    animation: subtitle-out 350ms ease-in forwards;
+  }
 }

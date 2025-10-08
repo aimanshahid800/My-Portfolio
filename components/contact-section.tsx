@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react"
+import ContactForm from "./contact-form"
 
 export default function ContactSection() {
   return (
@@ -28,7 +29,7 @@ export default function ContactSection() {
 
       {/* Floating gradient lines */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8B5CF6] to-transparent animate-pulse shadow-lg shadow-[#8B5CF6]/50"></div>
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#8B5CF0] to-transparent animate-pulse shadow-lg shadow-[#8B5CF0]/50"></div>
         <div
           className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#EC4899] to-transparent animate-pulse shadow-lg shadow-[#EC4899]/50"
           style={{ animationDelay: "1s" }}
@@ -53,21 +54,25 @@ export default function ContactSection() {
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-2xl mx-auto">
             Let's discuss your next project and bring your ideas to life
+            I'm always interested in new opportunities and exciting projects. Whether you have a question or just
+                want to say hi, feel free to reach out!
           </p>
+        </div>
+        {/* Contact Form */}
+        <div className="max-w-2xl mx-auto mt-12 sm:mt-14">
+          <ContactForm />
         </div>
 
         {/* Contact Info */}
         <div className="max-w-2xl mx-auto">
-          <div className="text-center space-y-8 sm:space-y-10">
+          <div className="text-center space-y-2 sm:space-y-2">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-semibold font-heading mb-6 sm:mb-8 text-white">Let's Connect</h3>
               <p className="text-white/70 mb-8 sm:mb-10 leading-relaxed text-base sm:text-lg max-w-xl mx-auto">
-                I'm always interested in new opportunities and exciting projects. Whether you have a question or just
-                want to say hi, feel free to reach out!
+                
               </p>
             </div>
 
-            <div className="space-y-6 sm:space-y-8">
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
               <div className="flex items-center justify-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#4CC9F0]/20 to-[#4CC9F0]/10 border border-[#4CC9F0]/30">
                   <Mail className="h-6 w-6 text-[#4CC9F0]" />
