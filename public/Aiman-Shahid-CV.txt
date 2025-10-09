@@ -1,0 +1,56 @@
+I am a Computer Science undergraduate at LCWU, developing a
+strong foundation in Artificial Intelligence, Software Engineering,
+Database Systems, and Data Structures. Alongside my degree, I’m
+pursuing an AI diploma from PIAIC, where I’ve gained hands-on
+experience with OpenAI SDK, Python, n8n workflows, and agentic AI
+systems. I actively enhance my coding skills through Vibe Coding and
+enjoy building real-world projects that combine logic, creativity, and
+intelligent automation.
+
+Aiman
+Shahid
+
+Contact Information
+0323-493-3498
+aimanshahid800@gmail.com
+
+Portfolio Link
+www.reallygreatsite.com
+
+Academic Projects
+AI Task Teller | OpenAI SDK & Python
+Built a task-based AI chatbot using OpenAI Agents SDK and Chainlit
+UI, capable of handling multi-agent handoffs and tool calls.
+
+Personal Study Assistant | React + OpenAI SDK
+Developed a study companion bot that organizes tasks, tracks
+progress and generates summaries using prompt engineering.
+
+Portfolio Website | Next.js + Tailwind CSS
+Designed and deployed a personal portfolio to showcase skills,
+projects, and certifications.
+
+Educational History
+Lahore College for Women University (LCWU)
+Bachelor in Computer Science (BSCS) — Ongoing | 2023–Present
+
+Hamayat-e-Islam Degree College for Women (HIDC)
+With High Honors | 2022
+Intermediate in ICS
+
+Mukram High School
+Honorable Mention | 2020
+Secondary Education (Matriculation)
+
+Awards
+Achieved 88% in Fundamentals of Agentic AI Level 1 Quiz (Panaverse DAO).
+Secured 80% in Prompt and Context Engineering Level 1 Certification Exam.
+Selected for the PIAIC AI Diploma, demonstrating excellence in programming and emerging technologies.
+Completed Modern Python for Developers certification (Panaverse DAO).
+
+Relevant Skills
+Programming Languages: Python, C++, HTML, CSS, JavaScript
+AI & Automation Tools: OpenAI SDK, n8n Workflows, Prompt Engineering
+Problem-Solving, Effective Communication
+Web Development: Frontend fundamentals (React basics, responsive design)
+Other Tools: VS Code, Chainlit, Google Colab, Jupyter Notebook
