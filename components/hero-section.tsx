@@ -28,7 +28,10 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-32">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-32"
+    >
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-[600px] h-[600px] bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/15 to-transparent rounded-full blur-[100px] animate-pulse-slow"></div>
         <div
@@ -121,8 +124,9 @@ export default function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-[#8B5CF6]/50 text-[#8B5CF6] hover:bg-[#8B5CF6]/10 hover:border-[#8B5CF6] font-semibold px-6 sm:px-8 py-3 rounded-full bg-transparent transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Download CV
+                Hire Me
               </Button>
             </div>
 

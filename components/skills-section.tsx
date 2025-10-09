@@ -12,12 +12,14 @@ const skillCards = [
   {
     title: "AI & Development Expertise",
     icon: Brain,
-    description: "Agentic AI, multi-agent orchestration, advanced prompt engineering, backend with FastAPI.",
+    description:
+      "Agentic AI, multi-agent orchestration, advanced prompt engineering, n8n workflows, backend with FastAPI.",
   },
   {
     title: "Achievements",
     icon: Trophy,
-    description: "Built AI Task Teller, Nyra AI Application, cleared 2 OpenAI Challenge Quizzes.",
+    description:
+      "Built AI Task Teller, Nyra AI Application, cleared 2 OpenAI Challenge Quizzes, cleared Prompt Engineering Quiz.",
   },
 ]
 

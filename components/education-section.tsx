@@ -35,12 +35,19 @@ const certificatesData = [
     score: "77%",
     description: "Complex orchestration and practical implementation of AI agents.",
   },
+  {
+    name: "Prompt and Context Engineering: Effective AI Communication Level 1 Certification Exam",
+    year: "2025",
+    score: "80%",
+    description: "Covered practical and communication strategies for efficient model alignment and output control.",
+  },
 ]
 
 export default function EducationSection() {
   const [visibleCards, setVisibleCards] = useState<number[]>([])
   const [showCertificate1, setShowCertificate1] = useState(false)
   const [showCertificate2, setShowCertificate2] = useState(false)
+  const [showCertificate3, setShowCertificate3] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -99,6 +106,24 @@ export default function EducationSection() {
         </div>
       )}
 
+      {showCertificate3 && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="relative max-w-4xl w-full bg-black/50 backdrop-blur-md border border-[#8B5CF6]/30 rounded-xl p-3 sm:p-6">
+            <button
+              onClick={() => setShowCertificate3(false)}
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+            >
+              <X className="w-4 h-4 text-white" />
+            </button>
+            <img
+              src="/prompt-context-l1-certificate.png"
+              alt="Prompt and Context Engineering: Effective AI Communication Level 1 Certification Exam"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
+
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-[#8B5CF6]/30 via-[#EC4899]/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-[#06B6D4]/30 via-[#8B5CF6]/20 to-transparent rounded-full blur-3xl"></div>
@@ -134,8 +159,10 @@ export default function EducationSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Education & Certificates Section */}
+        <div className="grid grid-cols-1 gap-8 lg:gap-12">
           <div>
+            {/* Education Section */}
             <div className="flex items-center justify-center lg:justify-start mb-6 sm:mb-8">
               <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-[#8B5CF6] mr-3" />
               <h3 className="text-xl sm:text-2xl font-semibold font-heading text-white">Education</h3>
@@ -186,6 +213,7 @@ export default function EducationSection() {
           </div>
 
           <div>
+            {/* Certificates Section */}
             <div className="flex items-center justify-center lg:justify-start mb-6 sm:mb-8">
               <Award className="h-6 w-6 sm:h-8 sm:w-8 text-[#EC4899] mr-3" />
               <h3 className="text-xl sm:text-2xl font-semibold font-heading text-white">Certificates</h3>
@@ -229,7 +257,11 @@ export default function EducationSection() {
                           </div>
                           <p className="text-sm text-white/70 leading-relaxed mb-4">{cert.description}</p>
                           <button
-                            onClick={() => (index === 0 ? setShowCertificate1(true) : setShowCertificate2(true))}
+                            onClick={() => {
+                              if (index === 0) setShowCertificate1(true)
+                              else if (index === 1) setShowCertificate2(true)
+                              else if (index === 2) setShowCertificate3(true)
+                            }}
                             className="inline-flex items-center px-3 sm:px-4 py-2 bg-gradient-to-r from-[#EC4899] to-[#06B6D4] text-white text-xs sm:text-sm font-medium rounded-lg hover:from-[#06B6D4] hover:to-[#8B5CF6] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#EC4899]/30 hover:shadow-[#06B6D4]/50"
                           >
                             <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
