@@ -6,7 +6,6 @@ import ProjectsSection from "@/components/projects-section"
 import EducationSection from "@/components/education-section"
 import ContactSection from "@/components/contact-section"
 import FloatingBlobs from "@/components/floating-blobs"
-import FixedCvButton from "@/components/fixed-cv-button" // import fixed CV button
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <ProjectsSection />
       <EducationSection />
       <ContactSection />
-      <FixedCvButton />
     </main>
   )
 }
